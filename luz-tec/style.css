@@ -1,0 +1,181 @@
+/* Reset de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
+  justify-content: center;
+}
+
+/* Estilos globais */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  overflow: auto; /* Alterado para 'auto' */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos do cabeçalho */
+header {
+  position: fixed; /* Adicionado */
+  top: 0; /* Adicionado */
+  left: 0; /* Adicionado */
+  width: 100%; /* Adicionado */
+  background-color: #0091ad;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999; /* Adicionado */
+}
+
+#icon-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fechar span {
+  display: none;
+}
+
+.material-symbols-outlined {
+  font-size: 2em;
+  color: #000000;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #000000;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #000000;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox {
+  display: none;
+}
+
+.label {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.fa-sun {
+  color: #f1c40f;
+}
+
+.fa-moon {
+  color: #34495e;
+}
+
+.content {
+  margin-top: 40px;
+}
+
+.image-container img {
+  max-width: 100%;
+}
+
+/* Estilos do submenu */
+/* Estilos do submenu */
+header nav ul {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 10px);
+  z-index: 9999;
+  display: none;
+  background-color: #0091ad;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  overflow-y: scroll; /* Adicionado */
+  margin-bottom: 10px; /* Adicionado */
+}
+
+header nav.open ul {
+  display: flex;
+}
+
+header nav.open ul + .content {
+  display: none; /* Oculta o conteúdo principal quando o submenu está aberto */
+}
+
+body.menu-open {
+  position: fixed; /* Fixa a posição do corpo da página quando o submenu está aberto */
+  overflow: hidden; /* Impede a rolagem da página quando o submenu está aberto */
+}
+
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #icon-container {
+    margin-bottom: 10px;
+  }
+
+  .material-symbols-outlined {
+    top: 0;
+    right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .theme-toggle {
+    margin-top: 20px;
+  }
+
+  .content {
+    margin-top: 20px;
+  }
+}
+@media only screen and (max-width: 600px) {
+    #io {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #io img {
+      width: 20%;
+      height: 5%;
+      margin-right: 10px;
+    }
+  }

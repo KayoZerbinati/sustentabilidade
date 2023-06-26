@@ -1,0 +1,91 @@
+/* Estilos padrão */
+body {
+  background-color: #fafafa;
+  color: #333;
+  transition: background 0.2s linear;
+}
+
+h1 {
+  color: inherit;
+}
+
+p {
+  color: inherit;
+}
+
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  right: 50px;
+  top: 100px; /* Ajuste a distância superior conforme necessário */
+}
+
+.theme-toggle .label {
+  margin-left: 10px; /* Adicionado para criar espaço entre o ícone e o botão de troca de tema */
+}
+
+.theme-toggle .label i {
+  font-size: 20px; /* Ajuste o tamanho do ícone conforme necessário */
+}
+
+.theme-toggle .checkbox {
+  display: none;
+}
+
+.theme-toggle .label {
+  background-color: #111;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  height: 30px;
+  width: 30px;
+}
+
+.theme-toggle .label i {
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.2s linear;
+}
+
+.theme-toggle .checkbox:checked + .label i {
+  color: #ffdc00;
+}
+
+/* Estilos para o modo escuro */
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+body.dark h1 {
+  color: inherit;
+}
+
+body.dark p {
+  color: inherit;
+}
+
+/* Alterações específicas */
+
+/* Altera a cor do sol branco para amarelo no modo escuro */
+body.dark .label i {
+  color: #f1c40f;
+}
+
+/* Altera a cor do sol branco para laranja no modo claro */
+body:not(.dark) .label i {
+  color: #e67e22;
+}
+
+/* Altera a cor do ball de preto para azul no modo claro */
+body:not(.dark) .ball {
+  background-color: #ffdc00;
+}
+
+/* Altera a cor do ball de preto para cinza no modo escuro */
+body.dark .ball {
+  background-color: #ccc;
+}

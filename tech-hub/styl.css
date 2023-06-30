@@ -1,0 +1,87 @@
+/* Estilos padrão */
+body {
+    background-color: #fafafa;
+    color: #333;
+    transition: background 0.2s linear;
+  }
+  
+  h1 {
+    color: inherit;
+  }
+  
+  p {
+    color: inherit;
+  }
+  
+  .theme-toggle {
+    right: 50px; /* Define a distância esquerda */
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    height: 50px;
+  }
+  
+  .theme-toggle .checkbox {
+    display: none;
+  }
+  
+  .theme-toggle .label {
+    background-color: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 30px;
+    width: 30px;
+    margin: 0 20%; /* Margem de 40% */
+    transform: scale(1.2);
+  }
+  
+  .theme-toggle .label i {
+    color: #ffffff;
+    font-size: 16px;
+    transition: color 0.2s linear;
+  }
+  
+  .theme-toggle .checkbox:checked + .label i {
+    color: #ffdc00;
+  }
+  
+  /* Estilos para o modo escuro */
+  body.dark {
+    background-color: #121212;
+    color: #fff;
+  }
+  
+  body.dark h1 {
+    color: inherit;
+  }
+  
+  body.dark p {
+    color: inherit;
+  }
+  
+  /* Alterações específicas */
+  
+  /* Altera a cor do sol branco para amarelo no modo escuro */
+  body.dark .label i {
+    color: #f1c40f;
+  }
+  
+  /* Altera a cor do sol branco para laranja no modo claro */
+  body:not(.dark) .label i {
+    color: #e67e22;
+  }
+  
+  /* Altera a cor do ball de preto para azul no modo claro */
+  body:not(.dark) .ball {
+    background-color: #ffdc00;
+  }
+  
+  /* Altera a cor do ball de preto para cinza no modo escuro */
+  body.dark .ball {
+    background-color: #ccc;
+  }
+  
